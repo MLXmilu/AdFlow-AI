@@ -205,12 +205,15 @@ const decisionRefs = [
   <div class="p-4 md:p-6 lg:p-10 h-full flex flex-col gap-6 lg:gap-8 overflow-y-auto">
     <!-- Header -->
     <header class="flex justify-between items-center">
-      <div>
-        <h2 class="text-2xl lg:text-3xl font-bold tracking-tight">暂停广告</h2>
-        <p class="text-white/40 mt-1 flex items-center gap-2">
-          <Activity :size="14" class="text-primary shrink-0" />
-          <span class="text-xs lg:text-sm">双流画中画 PiP · 氛围自适应 · 高潮保护调度</span>
-        </p>
+      <div class="flex items-center gap-6">
+        <div>
+          <h2 class="text-2xl lg:text-3xl font-bold tracking-tight">暂停广告</h2>
+          <p class="text-white/40 mt-1 flex items-center gap-2">
+            <Activity :size="14" class="text-primary shrink-0" />
+            <span class="text-xs lg:text-sm">双流画中画 PiP · 氛围自适应 · 高潮保护调度</span>
+          </p>
+        </div>
+        <span class="text-sm lg:text-base font-bold text-amber-400 animate-pulse">⚠️ 请使用科学上网体验效果</span>
       </div>
       <div class="glass px-3 lg:px-4 py-1.5 lg:py-2 flex items-center gap-2 border-primary/20">
         <div class="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e] shrink-0"></div>
