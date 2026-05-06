@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white antialiased overflow-hidden;
+    font-family: 'Inter', 'Outfit', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-surface backdrop-blur-md border border-border rounded-2xl;
+  }
+  
+  .glass-card {
+    @apply glass p-6 transition-all duration-300 hover:bg-white/10;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-2 bg-primary hover:opacity-90 text-white rounded-full transition-all duration-300 flex items-center gap-2;
+  }
+}
+
+/* 渐变动画 */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+/* 流式打字机光标 */
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: currentColor;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* 进场动画 */
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
